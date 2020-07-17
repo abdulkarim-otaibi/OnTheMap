@@ -21,6 +21,9 @@ class AddLocationViewController: UIViewController,UITextFieldDelegate {
         location.delegate = self
         mediaLink.delegate = self
         
+        location.setColorBordor()
+        mediaLink.setColorBordor()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

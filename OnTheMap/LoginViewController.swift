@@ -18,7 +18,14 @@ class LoginViewController: UIViewController , UITextFieldDelegate {
         
         emailTextField.delegate = self
         passwordTextField.delegate = self
+        
+        //bordor color
+        emailTextField.setColorBordor()
+        passwordTextField.setColorBordor()
+      
+
     }
+    
 
     override func viewWillAppear(_ animated: Bool) {
          super.viewWillAppear(animated)
@@ -135,3 +142,15 @@ extension UIResponder {
         UIResponder._currentFirstResponder = self
     }
 }
+
+extension UITextField {
+    func setColorBordor(){
+        self.layer.borderColor = UIColor.lightGray.cgColor
+        self.layer.borderWidth = 1
+        self.layer.masksToBounds = true
+        self.layer.cornerRadius = 5;
+    }
+}
+
+
+
