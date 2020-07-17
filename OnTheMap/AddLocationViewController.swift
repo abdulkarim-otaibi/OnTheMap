@@ -64,7 +64,7 @@ class AddLocationViewController: UIViewController,UITextFieldDelegate {
             load.stopAnimating()
             
             guard let firstLocation = Placemark?.first?.location else {
-                self.showAlert(title: "Error", message: error as! String)
+                self.showAlert(title: "Error", message: "no location found")
                 return
             }
             
